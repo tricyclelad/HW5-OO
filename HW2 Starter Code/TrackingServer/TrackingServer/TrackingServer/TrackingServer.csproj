@@ -48,6 +48,7 @@
     <Compile Include="Athlete.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Communicator.cs" />
+    <Compile Include="MessageFactory.cs" />
     <Compile Include="MessageProcessors\DidNotFinishUpdateProcessor.cs" />
     <Compile Include="MessageProcessors\FinishedUpdateProcessor.cs" />
     <Compile Include="MessageProcessors\HelloProcessor.cs" />

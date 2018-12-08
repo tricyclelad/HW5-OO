@@ -61,7 +61,7 @@ namespace TrackingServerTests
             Assert.AreEqual(MyRaceManager.MyRunners[3].age, 4);
             Assert.AreEqual(MyRaceManager.MyRunners[4].age, 1);
 
-            Assert.AreEqual(MyRaceManager.MyRunners[0].status, "did not start");
+            Assert.AreEqual(MyRaceManager.MyRunners[0].status, "DidNotStart");
             Assert.AreEqual(MyRaceManager.MyRunners[1].status, "Okay2");
             Assert.AreEqual(MyRaceManager.MyRunners[2].status, "Okay3");
             Assert.AreEqual(MyRaceManager.MyRunners[3].status, "Okay4");

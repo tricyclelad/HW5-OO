@@ -39,10 +39,19 @@ namespace TrackingServer
 
         private void MyCommunicator_IncomingMessage(string message, System.Net.IPEndPoint senderEndPoint)
         {
-            MessageProcessor myProcessor = GetMessageProcessor(message);
+            //MessageProcessor myProcessor = GetMessageProcessor(message);
+            //string[] SplitMessage = message.Split(',');
+            //var raceManageTemp = this;
+            //myProcessor.Process(SplitMessage, ref raceManageTemp, senderEndPoint);
+
             string[] SplitMessage = message.Split(',');
+            string processorString = SplitMessage[0];
+            MessageFactory messageFactory = new MessageFactory();
+            MessageProcessor myProcessor = messageFactory.GetMessageProcessor(processorString);
             var raceManageTemp = this;
             myProcessor.Process(SplitMessage, ref raceManageTemp, senderEndPoint);
+
+
         }
 
         public void stop()
