@@ -29,7 +29,9 @@ namespace TrackingServerTests
 
             string MessageFromCommunicator = "DidNotStart,1,-29";
             string[] SplitMessage = MessageFromCommunicator.Split(',');
-            MyRaceManager.MyMessageProcessor = MyRaceManager.GetMessageProcessor(MessageFromCommunicator);
+            string message = SplitMessage[0];
+            MessageFactory messageFactory = new MessageFactory();
+            MyRaceManager.MyMessageProcessor = messageFactory.GetMessageProcessor(message);
             MyRaceManager.MyMessageProcessor.Process(SplitMessage, ref MyRaceManager,endpoint1);
             Assert.AreEqual(MyRaceManager.MyRunners[0].bibNumber, 1);
             Assert.AreEqual(MyRaceManager.MyRunners[1].bibNumber, 2);

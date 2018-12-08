@@ -26,7 +26,9 @@ namespace TrackingServerTests
 
             string MessageFromCommunicator = "OnCourse,1,23,6666";
             string[] SplitMessage = MessageFromCommunicator.Split(',');
-            MyRaceManager.MyMessageProcessor = MyRaceManager.GetMessageProcessor(MessageFromCommunicator);
+            string message = SplitMessage[0];
+            MessageFactory messageFactory = new MessageFactory();
+            MyRaceManager.MyMessageProcessor = messageFactory.GetMessageProcessor(message);
             MyRaceManager.MyMessageProcessor.Process(SplitMessage, ref MyRaceManager,endpoint1);
             Assert.AreEqual(MyRaceManager.MyRunners[0].distanceCovered, 6666);
             Assert.AreEqual(MyRaceManager.MyRunners[0].lastUpdatedTime, 23);

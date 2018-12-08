@@ -28,7 +28,10 @@ namespace TrackingServerTests
 
             string MessageFromCommunicator = "DidNotFinish,1,6666";
             string[] SplitMessage = MessageFromCommunicator.Split(',');
-            MyRaceManager.MyMessageProcessor = MyRaceManager.GetMessageProcessor(MessageFromCommunicator);
+            string message = SplitMessage[0];
+            MessageFactory messageFactory = new MessageFactory();
+            //MyRaceManager.MyMessageProcessor = MyRaceManager.GetMessageProcessor(MessageFromCommunicator);
+            MyRaceManager.MyMessageProcessor = messageFactory.GetMessageProcessor(message);
             MyRaceManager.MyMessageProcessor.Process(SplitMessage, ref MyRaceManager,endpoint1);
             Assert.AreEqual(MyRaceManager.MyRunners[0].status, "DidNotFinish");
             Assert.AreEqual(MyRaceManager.MyRunners[0].lastUpdatedTime, 6666);

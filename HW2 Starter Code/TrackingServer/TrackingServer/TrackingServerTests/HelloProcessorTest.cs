@@ -36,7 +36,9 @@ namespace TrackingServerTests
 
             string MessageFromCommunicator = "Hello,127.1.1.1,1300";
             string[] SplitMessage = MessageFromCommunicator.Split(',');
-            MyRaceManager.MyMessageProcessor = MyRaceManager.GetMessageProcessor(MessageFromCommunicator);
+            string message = SplitMessage[0];
+            MessageFactory messageFactory = new MessageFactory();
+            MyRaceManager.MyMessageProcessor = messageFactory.GetMessageProcessor(message);
             MyRaceManager.MyMessageProcessor.Process(SplitMessage, ref MyRaceManager, endpoint1);
             Assert.AreEqual(MyRaceManager.MyClients[4].MyEndPoint.Address, endpoint5.Address);
             Assert.AreEqual(MyRaceManager.MyClients[4].MyEndPoint.Port, endpoint5.Port);

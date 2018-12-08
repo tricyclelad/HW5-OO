@@ -17,7 +17,9 @@ namespace TrackingServerTests
 
             string MessageFromCommunicator = "Registered,10,0,Camron,Martinez,Male,24";
             string[] SplitMessage = MessageFromCommunicator.Split(',');
-            MyRaceManager.MyMessageProcessor = MyRaceManager.GetMessageProcessor(MessageFromCommunicator);
+            string message = SplitMessage[0];
+            MessageFactory messageFactory = new MessageFactory();
+            MyRaceManager.MyMessageProcessor = messageFactory.GetMessageProcessor(message);
             MyRaceManager.MyMessageProcessor.Process(SplitMessage, ref MyRaceManager,endpoint1);
             Assert.AreEqual(MyRaceManager.MyRunners[0].bibNumber,10); 
             Assert.AreEqual(MyRaceManager.MyRunners[0].startTime,0); 

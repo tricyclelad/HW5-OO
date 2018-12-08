@@ -49,7 +49,9 @@ namespace TrackingServerTests
 
             string MessageFromCommunicator = "Unsubscribe,1,127.0.0.1,12000";
             string[] SplitMessage = MessageFromCommunicator.Split(',');
-            MyRaceManager.MyMessageProcessor = MyRaceManager.GetMessageProcessor(MessageFromCommunicator);
+            string message = SplitMessage[0];
+            MessageFactory messageFactory = new MessageFactory();
+            MyRaceManager.MyMessageProcessor = messageFactory.GetMessageProcessor(message);
             MyRaceManager.MyMessageProcessor.Process(SplitMessage, ref MyRaceManager,endpoint1);
             Assert.AreEqual(MyRaceManager.MyRunners[0]._observers.Count, 0);
         }

@@ -26,7 +26,9 @@ namespace TrackingServerTests
 
             string MessageFromCommunicator = "Finished,1,99999";
             string[] SplitMessage = MessageFromCommunicator.Split(',');
-            MyRaceManager.MyMessageProcessor = MyRaceManager.GetMessageProcessor(MessageFromCommunicator);
+            string message = SplitMessage[0];
+            MessageFactory messageFactory = new MessageFactory();
+            MyRaceManager.MyMessageProcessor = messageFactory.GetMessageProcessor(message);
             MyRaceManager.MyMessageProcessor.Process(SplitMessage, ref MyRaceManager, endpoint1);
             Assert.AreEqual(MyRaceManager.MyRunners[0].lastUpdatedTime, 99999);
             Assert.AreEqual(MyRaceManager.MyRunners[0].finishTime, 99998);

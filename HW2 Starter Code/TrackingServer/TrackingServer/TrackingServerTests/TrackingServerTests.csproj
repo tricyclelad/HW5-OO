@@ -61,7 +61,6 @@
     <Compile Include="DidNotFinishProcessorTest.cs" />
     <Compile Include="FinishedUpdateProcessorTest.cs" />
     <Compile Include="ClientTest.cs" />
-    <Compile Include="NewAthleteTest.cs" />
     <Compile Include="HelloProcessorTest.cs" />
     <Compile Include="SubscribeProcessorTest.cs" />
     <Compile Include="UnsubscribeProcessorTest.cs" />
