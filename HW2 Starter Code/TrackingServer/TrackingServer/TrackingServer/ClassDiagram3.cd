@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TrackingServer.RaceManager">
+    <Position X="3.75" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEIAQAAAAxAAAAAAAAAACgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RaceManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="MyCommunicator" />
+      <Property Name="MyMessageProcessor" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="MyClients" />
+      <Field Name="MyRunners" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Base.Communicator">
+    <Position X="3.75" Y="6.5" Width="2.25" />
+    <NestedTypes>
+      <Delegate Name="Base.Communicator.MessageHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Communicator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACQAAAAIBCAAAQAAAEABAAAAAAgAAAAAYAAAAACAAAI=</HashCode>
+      <FileName>Communicator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackingServer.Athlete">
+    <Position X="0.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAABAQAAAAAAggAACBAAAAAAAAAAACAACAAA=</HashCode>
+      <FileName>Athlete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackingServer.Client">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TrackingServer.MessageProcessor">
+    <Position X="8.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageProcessors\MessageProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

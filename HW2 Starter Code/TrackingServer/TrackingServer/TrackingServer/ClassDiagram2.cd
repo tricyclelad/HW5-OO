@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TrackingServer.Client">
+    <Position X="4.25" Y="5" Width="1.5" />
+    <AssociationLine Name="Subject" Type="TrackingServer.Athlete" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="7.069" />
+        <Point X="5" Y="8.79" />
+        <Point X="1.375" Y="8.79" />
+        <Point X="1.375" Y="8.415" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Subject" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TrackingServer.Subject">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <AssociationLine Name="Observers" Type="TrackingServer.Observer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.2" Y="0.12" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAIAAAABAAAAAAAQACAA=</HashCode>
+      <FileName>Subject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Observers" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TrackingServer.Athlete">
+    <Position X="0.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAABAQAAAAAAggAACBAAAAAAAAAAACAACAAA=</HashCode>
+      <FileName>Athlete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackingServer.Observer">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Observer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

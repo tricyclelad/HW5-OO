@@ -1,0 +1,37 @@
+2018-09-30 23:59:24,984 [1] DEBUG Base.Communicator - Setup UDP Client
+2018-09-30 23:59:25,000 [1] DEBUG Base.Communicator - Local Port 64698
+2018-09-30 23:59:25,002 [3] DEBUG Base.Communicator - Communicator Started
+2018-09-30 23:59:25,100 [1] DEBUG Base.Communicator - Send Hello to 127.0.0.1:12000
+2018-09-30 23:59:38,994 [3] DEBUG Base.Communicator - Got a Race,Bension Loop,16090 from 127.0.0.1:12000
+2018-09-30 23:59:38,995 [3] DEBUG Client.MainForm - Process messageText=Race,Bension Loop,16090
+2018-09-30 23:59:38,998 [3] DEBUG Client.Processor.RaceStartedProcessor - Started Race Bension Loop, 16090 meters
+2018-09-30 23:59:38,998 [3] DEBUG Base.Communicator - Got a Athlete,1,Valentine,Zamora,M,30 from 127.0.0.1:12000
+2018-09-30 23:59:38,999 [3] DEBUG Client.MainForm - Process messageText=Athlete,1,Valentine,Zamora,M,30
+2018-09-30 23:59:39,995 [3] DEBUG Base.Communicator - Got a Athlete,2,Deloras,Toole,F,19 from 127.0.0.1:12000
+2018-09-30 23:59:39,995 [3] DEBUG Client.MainForm - Process messageText=Athlete,2,Deloras,Toole,F,19
+2018-09-30 23:59:39,996 [3] DEBUG Base.Communicator - Got a Athlete,3,Chung,Holdaway,M,36 from 127.0.0.1:12000
+2018-09-30 23:59:39,996 [3] DEBUG Client.MainForm - Process messageText=Athlete,3,Chung,Holdaway,M,36
+2018-09-30 23:59:39,997 [3] DEBUG Base.Communicator - Got a Athlete,4,Dallas,Buskey,M,22 from 127.0.0.1:12000
+2018-09-30 23:59:39,997 [3] DEBUG Client.MainForm - Process messageText=Athlete,4,Dallas,Buskey,M,22
+2018-09-30 23:59:40,994 [3] DEBUG Base.Communicator - Got a Athlete,5,Major,Boots,M,35 from 127.0.0.1:12000
+2018-09-30 23:59:40,995 [3] DEBUG Client.MainForm - Process messageText=Athlete,5,Major,Boots,M,35
+2018-09-30 23:59:40,995 [3] DEBUG Base.Communicator - Got a Athlete,6,Adrian,Logan,M,30 from 127.0.0.1:12000
+2018-09-30 23:59:40,995 [3] DEBUG Client.MainForm - Process messageText=Athlete,6,Adrian,Logan,M,30
+2018-09-30 23:59:40,995 [3] DEBUG Base.Communicator - Got a Athlete,7,Justina,Lapoint,F,50 from 127.0.0.1:12000
+2018-09-30 23:59:40,995 [3] DEBUG Client.MainForm - Process messageText=Athlete,7,Justina,Lapoint,F,50
+2018-09-30 23:59:41,995 [3] DEBUG Base.Communicator - Got a Athlete,8,Eugenio,Fant,M,36 from 127.0.0.1:12000
+2018-09-30 23:59:41,995 [3] DEBUG Client.MainForm - Process messageText=Athlete,8,Eugenio,Fant,M,36
+2018-09-30 23:59:41,995 [3] DEBUG Base.Communicator - Got a Athlete,9,Evalyn,Zepp,F,49 from 127.0.0.1:12000
+2018-09-30 23:59:41,995 [3] DEBUG Client.MainForm - Process messageText=Athlete,9,Evalyn,Zepp,F,49
+2018-09-30 23:59:42,995 [3] DEBUG Base.Communicator - Got a Athlete,10,Richelle,Joslyn,F,38 from 127.0.0.1:12000
+2018-09-30 23:59:42,995 [3] DEBUG Client.MainForm - Process messageText=Athlete,10,Richelle,Joslyn,F,38
+2018-09-30 23:59:44,859 [1] DEBUG Base.Communicator - Send Subscribe,1 to 127.0.0.1:12000
+2018-09-30 23:59:44,863 [1] DEBUG Base.Communicator - Send Subscribe,2 to 127.0.0.1:12000
+2018-09-30 23:59:44,867 [1] DEBUG Base.Communicator - Send Subscribe,3 to 127.0.0.1:12000
+2018-09-30 23:59:44,871 [1] DEBUG Base.Communicator - Send Subscribe,4 to 127.0.0.1:12000
+2018-09-30 23:59:44,876 [1] DEBUG Base.Communicator - Send Subscribe,5 to 127.0.0.1:12000
+2018-09-30 23:59:44,882 [1] DEBUG Base.Communicator - Send Subscribe,6 to 127.0.0.1:12000
+2018-09-30 23:59:44,887 [1] DEBUG Base.Communicator - Send Subscribe,7 to 127.0.0.1:12000
+2018-09-30 23:59:44,892 [1] DEBUG Base.Communicator - Send Subscribe,8 to 127.0.0.1:12000
+2018-09-30 23:59:44,899 [1] DEBUG Base.Communicator - Send Subscribe,9 to 127.0.0.1:12000
+2018-09-30 23:59:44,900 [1] DEBUG Base.Communicator - Send Subscribe,10 to 127.0.0.1:12000
