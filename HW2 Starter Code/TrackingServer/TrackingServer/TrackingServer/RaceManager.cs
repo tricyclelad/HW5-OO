@@ -39,10 +39,6 @@ namespace TrackingServer
 
         private void MyCommunicator_IncomingMessage(string message, System.Net.IPEndPoint senderEndPoint)
         {
-            //MessageProcessor myProcessor = GetMessageProcessor(message);
-            //string[] SplitMessage = message.Split(',');
-            //var raceManageTemp = this;
-            //myProcessor.Process(SplitMessage, ref raceManageTemp, senderEndPoint);
             string[] SplitMessage = message.Split(',');
             string processorString = SplitMessage[0];
             MessageFactory messageFactory = new MessageFactory();
@@ -55,73 +51,5 @@ namespace TrackingServer
         {
             MyCommunicator.Stop();
         }
-        //public MessageProcessor GetMessageProcessor(string message)
-        //{
-        //    string[] SplitMessage = message.Split(',');
-        //    MessageProcessor _myProcessor = null;
-        //    if(SplitMessage[0] == "Race")
-        //    {
-        //        _myProcessor = new RaceStartedProcessor();
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "Registered")
-        //    {
-        //        _myProcessor = new RegisteredUpdateProcessor();
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "DidNotStart")
-        //    {
-        //        _myProcessor = new DidNotStartProcessor(); 
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "Started")
-        //    {
-        //        _myProcessor = new StartedUpdateProcessor(); 
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "OnCourse")
-        //    {
-        //        _myProcessor = new OnCourseUpdateProcessor(); 
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "DidNotFinish")
-        //    {
-        //        _myProcessor = new DidNotFinishUpdateProcessor(); 
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "Finished")
-        //    {
-        //        _myProcessor = new FinishedUpdateProcessor(); 
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "Hello")
-        //    {
-        //        _myProcessor = new HelloProcessor(); 
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "Subscribe")
-        //    {
-        //        _myProcessor = new SubscribeProcessor(); 
-        //        return _myProcessor;
-        //    }
-        //    else if (SplitMessage[0] == "Unsubscribe")
-        //    {
-        //        _myProcessor = new UnsubscribeProcessor(); 
-        //        return _myProcessor;
-        //    }
-        //    //else if (SplitMessage[0] == "Athlete")
-        //    //{
-        //    //    _myProcessor = new NewAthleteProcessor(); 
-        //    //    return _myProcessor;
-        //    //}
-        //    //else if (SplitMessage[0] == "Status")
-        //    //{
-        //    //    _myProcessor = new AthleteStatusProcessor(); 
-        //    //    return _myProcessor;
-        //    //}
-        //    //Actually not needed
-        //    return _myProcessor;
-        //}
-        
     }
 }
