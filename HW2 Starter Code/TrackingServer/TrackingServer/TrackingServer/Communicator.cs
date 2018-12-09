@@ -9,6 +9,7 @@ namespace Base
 {
     public class Communicator
     {
+        private static Communicator uniqueInstance;
         public delegate void MessageHandler(string message, IPEndPoint senderEndPoint);
 
         public event MessageHandler IncomingMessage;
@@ -21,7 +22,7 @@ namespace Base
         /// <summary>
         /// Default Constructor, which opens a UDP socket on any available port
         /// </summary>
-        public Communicator()
+        private Communicator()
         {
             Initialize();
         }
@@ -31,12 +32,28 @@ namespace Base
         /// by another process on the computer, this constructor will throw an exception.
         /// </summary>
         /// <param name="localPort">If non-zero, the communicator will attempt to use this port</param>
-        public Communicator(int localPort)
+        private Communicator(int localPort)
         {
             LocalPort = localPort;
             Initialize();
         }
 
+        public static Communicator getCommunicatorInstance()
+        {
+            if (uniqueInstance == null)
+            {
+                uniqueInstance = new Communicator();
+            }
+            return uniqueInstance;
+        }
+        public static Communicator getCommunicatorInstance(int localPort)
+        {
+            if (uniqueInstance == null)
+            {
+                uniqueInstance = new Communicator(localPort);
+            }
+            return uniqueInstance;
+        }
         /// <summary>
         /// Get the local port of the UDP socket.
         /// </summary>

@@ -27,7 +27,8 @@ namespace TrackingServer
 
         public void start()
         {
-            MyCommunicator = new Communicator(12000);
+            //MyCommunicator = new Communicator(12000);
+            MyCommunicator = Communicator.getCommunicatorInstance(12000);
             MyCommunicator.IncomingMessage += MyCommunicator_IncomingMessage;
             MyCommunicator.Start();
             //string MessageFromCommunicator = "Race, RaceName, 100";
