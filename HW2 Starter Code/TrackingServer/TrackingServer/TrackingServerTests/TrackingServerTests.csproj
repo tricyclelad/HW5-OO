@@ -63,6 +63,7 @@
     <Compile Include="ClientTest.cs" />
     <Compile Include="HelloProcessorTest.cs" />
     <Compile Include="SubscribeProcessorTest.cs" />
+    <Compile Include="CommunicatorTest.cs" />
     <Compile Include="UnsubscribeProcessorTest.cs" />
   </ItemGroup>
   <ItemGroup>

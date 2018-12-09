@@ -13,7 +13,8 @@ namespace TrackingServerTests
         {
             RaceManager MyRaceManager = new RaceManager();
                 
-            MyRaceManager.MyCommunicator = new Communicator(12000);
+            //MyRaceManager.MyCommunicator = new Communicator(12000);
+            MyRaceManager.MyCommunicator = Communicator.getCommunicatorInstance(12000); 
 
             System.Net.IPEndPoint endpoint1 = new System.Net.IPEndPoint(127001, 12000);
 

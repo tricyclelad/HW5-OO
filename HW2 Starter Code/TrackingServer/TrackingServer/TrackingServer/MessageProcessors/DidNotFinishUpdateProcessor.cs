@@ -29,7 +29,6 @@ namespace TrackingServer
                         }
 
                     }
-                    //Communicator Logic here
                 }
             }
         }
